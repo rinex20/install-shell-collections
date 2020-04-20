@@ -5,7 +5,7 @@ FILE_NAME="v2ray-linux-arm.zip"
 V2RAY_DIR="/usr/bin/v2ray/"
 
 mkdir v2ray -p
-wget -d v2ray/ ${DOWNLOAD_URL}$1/FILE_NAME
+wget -O v2ray/ ${DOWNLOAD_URL}$1/FILE_NAME
 
 systemctl stop v2ray
 cp v2ray/v2ray_armv7 V2RAY_DIR
