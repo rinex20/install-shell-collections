@@ -7,6 +7,10 @@ V2RAY_DIR="/usr/bin/v2ray"
 echo "Downloading raw files"
 mkdir v2ray -p
 wget -O ${FILE_NAME} ${DOWNLOAD_URL}$1/${FILE_NAME}
+if [ $? -ne 0 ]; then
+    echo "Error: Failed to download file" && exit 1
+fi
+echo "Download file completed"
 
 echo "unzip raw file to v2ray directory"
 unzip -o ${FILE_NAME} -d v2ray 
