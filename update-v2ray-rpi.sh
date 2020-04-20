@@ -1,6 +1,7 @@
 #!/bin/bash
 
-update_v2ray(){
+  clear
+  
   DOWNLOAD_URL="https://github.com/v2ray/v2ray-core/releases/download/"
   FILE_NAME="v2ray-linux-arm.zip"
   V2RAY_DIR="/usr/bin/v2ray"
@@ -28,26 +29,3 @@ update_v2ray(){
   echo "restart v2ray"
   systemctl start v2ray
   systemctl status v2ray
-}
-
-clear
-while :; do
-	echo
-	echo "........... V2Ray update .........."
-	echo
-		
-	read -p "$(echo -e "Please input the latest version [${magenta}1-2$none]:")" choose
-	case $choose in
-	1)
-		install
-		break
-		;;
-	2)
-		uninstall
-		break
-		;;
-	*)
-		error
-		;;
-	esac
-done
