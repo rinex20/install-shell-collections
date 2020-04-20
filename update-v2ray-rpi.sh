@@ -7,7 +7,7 @@ V2RAY_DIR="/usr/bin/v2ray"
 mkdir v2ray -p
 wget -O ${FILE_NAME} ${DOWNLOAD_URL}$1/${FILE_NAME}
 
-unzip -d v2ray ${FILE_NAME}
+unzip -o ${FILE_NAME} -d v2ray 
 
 systemctl stop v2ray
 cp v2ray/v2ray_armv7 ${V2RAY_DIR}/v2ray
