@@ -5,7 +5,7 @@ FILE_NAME="v2ray-linux-arm.zip"
 V2RAY_DIR="/usr/bin/v2ray/"
 
 mkdir v2ray -p
-wget -O ${FILE_NAME} ${DOWNLOAD_URL}$1/FILE_NAME
+wget -O ${FILE_NAME} ${DOWNLOAD_URL}$1/${FILE_NAME}
 
 unzip -d v2ray ${FILE_NAME}
 
